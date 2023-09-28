@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="Egyptian_Quiz" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuBg" translatesAutoresizingMaskIntoConstraints="NO" id="WfN-pg-SxR">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="WfN-pg-SxR" secondAttribute="bottom" id="60p-CG-DQZ"/>
+                <constraint firstItem="WfN-pg-SxR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ass-WH-Hlk"/>
+                <constraint firstItem="WfN-pg-SxR" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="L2T-J7-PYu"/>
+                <constraint firstItem="WfN-pg-SxR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RX5-Gc-7yC"/>
+                <constraint firstItem="WfN-pg-SxR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="U1a-Og-n1f"/>
+                <constraint firstItem="WfN-pg-SxR" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ZXC-sx-mj1"/>
+            </constraints>
+            <point key="canvasLocation" x="136.80000000000001" y="20.689655172413794"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="menuBg" width="2160" height="4800"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

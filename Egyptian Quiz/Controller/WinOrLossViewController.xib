@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WinOrLossViewController" customModule="Egyptian_Quiz" customModuleProvider="target">
+            <connections>
+                <outlet property="fullAnswerColorImage" destination="afN-Wq-Ryu" id="UOj-0g-gNk"/>
+                <outlet property="menuButton" destination="ejW-sc-zis" id="cPC-Vj-cKK"/>
+                <outlet property="replayButton" destination="W16-5S-KXC" id="ueP-Cr-iZf"/>
+                <outlet property="textImageLabel" destination="itG-2M-yKu" id="uNt-D5-ep5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="winOrLossImage" destination="VD9-qe-swG" id="bON-DM-eHd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="winBg" translatesAutoresizingMaskIntoConstraints="NO" id="GMl-qW-MWC">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="winner" translatesAutoresizingMaskIntoConstraints="NO" id="VD9-qe-swG">
+                    <rect key="frame" x="25" y="154.66666666666663" width="325" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="hhA-wx-nKh"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fullCorrectAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="afN-Wq-Ryu">
+                    <rect key="frame" x="25" y="412.66666666666669" width="325" height="216.66666666666669"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="afN-Wq-Ryu" secondAttribute="height" multiplier="1.5:1" id="pLP-7y-2Kw"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="I9D-qJ-4it">
+                    <rect key="frame" x="119.66666666666669" y="645.33333333333337" width="136" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W16-5S-KXC">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="7lG-qW-Whw"/>
+                                <constraint firstAttribute="height" constant="60" id="gKq-zj-LMn"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button" image="replay"/>
+                            <connections>
+                                <action selector="replayButtonAction:" destination="-1" eventType="touchUpInside" id="EYZ-Jc-pbI"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejW-sc-zis">
+                            <rect key="frame" x="75.999999999999986" y="0.0" width="60.000000000000014" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="TZK-NX-K21"/>
+                                <constraint firstAttribute="width" constant="60" id="fob-gv-vjN"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button" image="menu"/>
+                            <connections>
+                                <action selector="menuAction:" destination="-1" eventType="touchUpInside" id="RuA-RH-Tr0"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itG-2M-yKu">
+                    <rect key="frame" x="41" y="428.66666666666669" width="293" height="184.66666666666669"/>
+                    <string key="text">In the modern world, a high-quality prototype of a future project is crucial for favorable prospects. For the modern world, a new model of organizational activity is perfect for achieving the goals set by society! We are forced to start from the fact that the semantic analysis of external counteractions provides ample opportunities for further directions of development.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VD9-qe-swG" secondAttribute="trailing" constant="25" id="7U4-lN-vuX"/>
+                <constraint firstItem="I9D-qJ-4it" firstAttribute="top" secondItem="afN-Wq-Ryu" secondAttribute="bottom" constant="16" id="7hz-aN-xoI"/>
+                <constraint firstItem="GMl-qW-MWC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KfK-Ci-pum"/>
+                <constraint firstItem="afN-Wq-Ryu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="L5J-1h-OLH"/>
+                <constraint firstItem="itG-2M-yKu" firstAttribute="leading" secondItem="afN-Wq-Ryu" secondAttribute="leading" constant="16" id="LUG-8M-k32"/>
+                <constraint firstItem="GMl-qW-MWC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MHK-xE-Xtw"/>
+                <constraint firstItem="itG-2M-yKu" firstAttribute="bottom" secondItem="afN-Wq-Ryu" secondAttribute="bottom" constant="-16" id="MuA-nn-GGq"/>
+                <constraint firstItem="afN-Wq-Ryu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="PwK-BX-M0O"/>
+                <constraint firstItem="I9D-qJ-4it" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TM4-pd-KaW"/>
+                <constraint firstItem="VD9-qe-swG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Tn3-aw-NJB"/>
+                <constraint firstItem="itG-2M-yKu" firstAttribute="trailing" secondItem="afN-Wq-Ryu" secondAttribute="trailing" constant="-16" id="Yuu-QM-q6p"/>
+                <constraint firstItem="VD9-qe-swG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="b9k-ej-DZP"/>
+                <constraint firstItem="GMl-qW-MWC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ez4-gD-tkr"/>
+                <constraint firstItem="GMl-qW-MWC" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="fyY-j6-Rvi"/>
+                <constraint firstItem="afN-Wq-Ryu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="115" id="i7a-hD-7DW"/>
+                <constraint firstItem="itG-2M-yKu" firstAttribute="top" secondItem="afN-Wq-Ryu" secondAttribute="top" constant="16" id="lun-Bg-1hL"/>
+                <constraint firstItem="afN-Wq-Ryu" firstAttribute="top" secondItem="VD9-qe-swG" secondAttribute="bottom" constant="8" id="m9s-T7-VeT"/>
+                <constraint firstItem="GMl-qW-MWC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="oyl-hF-B6M"/>
+                <constraint firstAttribute="bottom" secondItem="GMl-qW-MWC" secondAttribute="bottom" id="rS7-id-qWS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="afN-Wq-Ryu" secondAttribute="trailing" constant="25" id="tC7-pI-0ug"/>
+            </constraints>
+            <point key="canvasLocation" x="136.80000000000001" y="20.689655172413794"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fullCorrectAnswer" width="1848" height="1046"/>
+        <image name="menu" width="243" height="243"/>
+        <image name="replay" width="243" height="243"/>
+        <image name="winBg" width="2160" height="4800"/>
+        <image name="winner" width="1848" height="1814"/>
+    </resources>
+</document>
