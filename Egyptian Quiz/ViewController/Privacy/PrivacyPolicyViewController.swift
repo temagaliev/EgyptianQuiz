@@ -17,7 +17,6 @@ class PrivacyPolicyViewController: UIViewController, WKNavigationDelegate {
         webView = WKWebView()
         webView.navigationDelegate = self
         view = webView
-        
     }
     
     override func viewDidLoad() {
@@ -31,6 +30,6 @@ class PrivacyPolicyViewController: UIViewController, WKNavigationDelegate {
     }
     
     @objc func closeAction() {
-        dismiss(animated: true)
+        MainRouter.shared.closeTermsViewScreen()
     }
 }

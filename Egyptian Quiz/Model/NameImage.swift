@@ -33,4 +33,9 @@ enum NameImage: String {
     case replay = "replay"
     case winner = "winner"
     case wrongAnswer = "wrongAnswer"
+    case map = "map"
+    case textHistroty = "textHistroty"
+    case pyramid = "pyramid"
+    case placeCheck = "placeCheck"
+    case backButton = "backButton"
 }

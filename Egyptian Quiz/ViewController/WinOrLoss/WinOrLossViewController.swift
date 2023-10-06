@@ -15,15 +15,14 @@ class WinOrLossViewController: UIViewController {
     
     @IBOutlet weak var replayButton: UIButton!
     @IBOutlet weak var menuButton: UIButton!
-    
-    private var isWin: Bool = false
-    private var currentQuestion: Question!
+    var arrayQuestions: QuestionList = QuestionList()
+
+    private var correctAnswer: Int
     
     // MARK: - init
-    init(isWin: Bool, currentQuestion: Question) {
+    init(correctAnswer: Int) {
+        self.correctAnswer = correctAnswer
         super.init(nibName: nil, bundle: nil)
-        self.isWin = isWin
-        self.currentQuestion = currentQuestion
     }
         
     required init?(coder aDecoder: NSCoder) {
@@ -33,9 +32,8 @@ class WinOrLossViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        textImageLabel.text = currentQuestion.question
-        
-        if isWin {
+        textImageLabel.text = "Correct answer: \(correctAnswer)"
+        if correctAnswer >= 16 {
             winOrLossImage.image = UIImage(named: NameImage.winner.rawValue)
             fullAnswerColorImage.image = UIImage(named: NameImage.fullCorrectAnswer.rawValue)
         } else {

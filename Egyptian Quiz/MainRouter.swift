@@ -30,22 +30,49 @@ final class MainRouter {
         rootViewController?.pushViewController(PrivacyPolicyViewController(), animated: true)
     }
     
-    func showWinViewScreen(isWin: Bool, currentQuestion: Question) {
-        rootViewController?.pushViewController(WinOrLossViewController(isWin: isWin, currentQuestion: currentQuestion), animated: true)
+    func closeTermsViewScreen() {
+        rootViewController?.popViewController(animated: true)
+    }
+    
+    func showWinViewScreen(correctAnswer: Int) {
+        rootViewController?.pushViewController(WinOrLossViewController(correctAnswer: correctAnswer), animated: true)
     }
     
     func closeWinViewScreen() {
         rootViewController?.popViewController(animated: true)
     }
     
-    func showGameViewScreen() {
-        rootViewController?.pushViewController(GameViewController(), animated: true)
+    func showGameViewScreen(gameType: AnnotationTitle) {
+        rootViewController?.pushViewController(GameViewController(annotationName: gameType), animated: true)
     }
-
-    // MARK: Common
-//    func presentCustomViewController(_ viewController: UIViewController, animated: Bool = true) {
-//        rootViewController?.present(viewController, animated: animated)
-//    }
+    
+    func closeGameViewScreen() {
+        rootViewController?.popViewController(animated: true)
+    }
+    
+    func showMapViewScreen() {
+        rootViewController?.pushViewController(MapViewController(), animated: true)
+    }
+    
+    func closeMapViewScreen() {
+        rootViewController?.popViewController(animated: true)
+    }
+    
+    func showHistoryViewScreen() {
+        rootViewController?.pushViewController(HistoryViewController(), animated: true)
+    }
+    
+    func closeHistoryViewScreen() {
+        rootViewController?.popViewController(animated: true)
+    }
+    
+    func showDescViewScreen(annotation: AnnotationTitle) {
+        rootViewController?.pushViewController(DescriptionViewController(annotationName: annotation), animated: true)
+    }
+    
+    func closeDescViewScreen() {
+        rootViewController?.popViewController(animated: true)
+    }
     
     private func pushToRoot(controller: UIViewController) {
         if let vc = rootViewController {

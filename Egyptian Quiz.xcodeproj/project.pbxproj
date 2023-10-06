@@ -20,6 +20,13 @@
 		24007D812AC42DFE00C967D2 /* WinOrLossViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24007D7F2AC42DFE00C967D2 /* WinOrLossViewController.xib */; };
 		24007D832AC43E1900C967D2 /* ModelQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24007D822AC43E1900C967D2 /* ModelQuestion.swift */; };
 		24007D852AC4575700C967D2 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24007D842AC4575700C967D2 /* MainRouter.swift */; };
+		24AD85602ACD4FDD0079A83A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AD855E2ACD4FDD0079A83A /* MapViewController.swift */; };
+		24AD85612ACD4FDD0079A83A /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24AD855F2ACD4FDD0079A83A /* MapViewController.xib */; };
+		24AD85632ACD58430079A83A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AD85622ACD58430079A83A /* Place.swift */; };
+		24AD85662ACD90DF0079A83A /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AD85642ACD90DF0079A83A /* DescriptionViewController.swift */; };
+		24AD85672ACD90DF0079A83A /* DescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24AD85652ACD90DF0079A83A /* DescriptionViewController.xib */; };
+		24AD856A2ACEEAE10079A83A /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AD85682ACEEAE10079A83A /* HistoryViewController.swift */; };
+		24AD856B2ACEEAE10079A83A /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24AD85692ACEEAE10079A83A /* HistoryViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +45,13 @@
 		24007D7F2AC42DFE00C967D2 /* WinOrLossViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WinOrLossViewController.xib; sourceTree = "<group>"; };
 		24007D822AC43E1900C967D2 /* ModelQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelQuestion.swift; sourceTree = "<group>"; };
 		24007D842AC4575700C967D2 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		24AD855E2ACD4FDD0079A83A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		24AD855F2ACD4FDD0079A83A /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		24AD85622ACD58430079A83A /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		24AD85642ACD90DF0079A83A /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		24AD85652ACD90DF0079A83A /* DescriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionViewController.xib; sourceTree = "<group>"; };
+		24AD85682ACEEAE10079A83A /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		24AD85692ACEEAE10079A83A /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				24007D5C2AC3FB6F00C967D2 /* AppDelegate.swift */,
+				24007D842AC4575700C967D2 /* MainRouter.swift */,
 				24007D752AC407DF00C967D2 /* Model */,
-				24007D702AC3FC0100C967D2 /* Controller */,
+				24007D702AC3FC0100C967D2 /* ViewController */,
 				24007D652AC3FB7200C967D2 /* Assets.xcassets */,
 				24007D672AC3FB7200C967D2 /* LaunchScreen.storyboard */,
 				24007D6A2AC3FB7200C967D2 /* Info.plist */,
@@ -80,28 +95,90 @@
 			path = "Egyptian Quiz";
 			sourceTree = "<group>";
 		};
-		24007D702AC3FC0100C967D2 /* Controller */ = {
+		24007D702AC3FC0100C967D2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				24007D712AC3FC1900C967D2 /* MenuViewController.swift */,
-				24007D722AC3FC1900C967D2 /* MenuViewController.xib */,
-				24007D782AC4238C00C967D2 /* PrivacyPolicyViewController.swift */,
-				24007D7A2AC4249500C967D2 /* GameViewController.swift */,
-				24007D7B2AC4249500C967D2 /* GameViewController.xib */,
-				24007D7E2AC42DFE00C967D2 /* WinOrLossViewController.swift */,
-				24007D7F2AC42DFE00C967D2 /* WinOrLossViewController.xib */,
+				24AD856C2ACF0B390079A83A /* Menu */,
+				24AD856D2ACF0B4A0079A83A /* Game */,
+				24AD856E2ACF0B540079A83A /* WinOrLoss */,
+				24AD856F2ACF0B630079A83A /* Map */,
+				24AD85702ACF0B8F0079A83A /* Description */,
+				24AD85712ACF0BA10079A83A /* History */,
+				24B34D092ACF0BD600DE87BF /* Privacy */,
 			);
-			path = Controller;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		24007D752AC407DF00C967D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				24007D842AC4575700C967D2 /* MainRouter.swift */,
 				24007D762AC407F100C967D2 /* NameImage.swift */,
 				24007D822AC43E1900C967D2 /* ModelQuestion.swift */,
+				24AD85622ACD58430079A83A /* Place.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		24AD856C2ACF0B390079A83A /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				24007D712AC3FC1900C967D2 /* MenuViewController.swift */,
+				24007D722AC3FC1900C967D2 /* MenuViewController.xib */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		24AD856D2ACF0B4A0079A83A /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				24007D7A2AC4249500C967D2 /* GameViewController.swift */,
+				24007D7B2AC4249500C967D2 /* GameViewController.xib */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		24AD856E2ACF0B540079A83A /* WinOrLoss */ = {
+			isa = PBXGroup;
+			children = (
+				24007D7E2AC42DFE00C967D2 /* WinOrLossViewController.swift */,
+				24007D7F2AC42DFE00C967D2 /* WinOrLossViewController.xib */,
+			);
+			path = WinOrLoss;
+			sourceTree = "<group>";
+		};
+		24AD856F2ACF0B630079A83A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				24AD855E2ACD4FDD0079A83A /* MapViewController.swift */,
+				24AD855F2ACD4FDD0079A83A /* MapViewController.xib */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		24AD85702ACF0B8F0079A83A /* Description */ = {
+			isa = PBXGroup;
+			children = (
+				24AD85642ACD90DF0079A83A /* DescriptionViewController.swift */,
+				24AD85652ACD90DF0079A83A /* DescriptionViewController.xib */,
+			);
+			path = Description;
+			sourceTree = "<group>";
+		};
+		24AD85712ACF0BA10079A83A /* History */ = {
+			isa = PBXGroup;
+			children = (
+				24AD85682ACEEAE10079A83A /* HistoryViewController.swift */,
+				24AD85692ACEEAE10079A83A /* HistoryViewController.xib */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		24B34D092ACF0BD600DE87BF /* Privacy */ = {
+			isa = PBXGroup;
+			children = (
+				24007D782AC4238C00C967D2 /* PrivacyPolicyViewController.swift */,
+			);
+			path = Privacy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +209,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					24007D582AC3FB6F00C967D2 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -162,7 +239,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24AD85672ACD90DF0079A83A /* DescriptionViewController.xib in Resources */,
 				24007D7D2AC4249500C967D2 /* GameViewController.xib in Resources */,
+				24AD85612ACD4FDD0079A83A /* MapViewController.xib in Resources */,
+				24AD856B2ACEEAE10079A83A /* HistoryViewController.xib in Resources */,
 				24007D692AC3FB7200C967D2 /* LaunchScreen.storyboard in Resources */,
 				24007D812AC42DFE00C967D2 /* WinOrLossViewController.xib in Resources */,
 				24007D742AC3FC1900C967D2 /* MenuViewController.xib in Resources */,
@@ -180,11 +260,15 @@
 				24007D7C2AC4249500C967D2 /* GameViewController.swift in Sources */,
 				24007D852AC4575700C967D2 /* MainRouter.swift in Sources */,
 				24007D802AC42DFE00C967D2 /* WinOrLossViewController.swift in Sources */,
+				24AD856A2ACEEAE10079A83A /* HistoryViewController.swift in Sources */,
 				24007D5D2AC3FB6F00C967D2 /* AppDelegate.swift in Sources */,
+				24AD85602ACD4FDD0079A83A /* MapViewController.swift in Sources */,
 				24007D772AC407F100C967D2 /* NameImage.swift in Sources */,
 				24007D732AC3FC1900C967D2 /* MenuViewController.swift in Sources */,
 				24007D792AC4238C00C967D2 /* PrivacyPolicyViewController.swift in Sources */,
+				24AD85662ACD90DF0079A83A /* DescriptionViewController.swift in Sources */,
 				24007D832AC43E1900C967D2 /* ModelQuestion.swift in Sources */,
+				24AD85632ACD58430079A83A /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +322,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -298,6 +383,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
